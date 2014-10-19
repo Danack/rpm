@@ -35,7 +35,7 @@ make %{?_smp_mflags}
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}%{_initrddir}
-install -Dp -m0755 sapi/fpm/init.d.php-fpm.in %{buildroot}%{_initrddir}/php-fpm
+install -Dp -m0755 sapi/fpm/init.d.php-fpm %{buildroot}%{_initrddir}/php-fpm
 %{__make} install INSTALL_ROOT="%{buildroot}"
 
 %post
